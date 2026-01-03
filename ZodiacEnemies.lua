@@ -112,9 +112,10 @@ end
 
 for i, enemy in ipairs(enemyPositions) do
 
-    while Svc.ClientState.TerritoryType ~= enemy.zoneId do
+    while Svc.ClientState.TerritoryType ~= enemy.zoneId and not Svc.Condition[27] do
         IPC.Lifestream.Teleport(enemy.aetheryiteId, 0)
-        yield("/wait 5")
+        Dalamud.Log("Teleporting")
+        yield("/wait 15")
     end
 
     if not Svc.Condition[4] then
