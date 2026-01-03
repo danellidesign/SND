@@ -54,7 +54,7 @@ local zodiacBooks = {
         { name = "5th Cohort Secutor", zoneId = 156, aetheryiteId = 24, x = -570.6, y = -2.9, z = -424.8 },
         { name = "Axolotl", zoneId = 138, aetheryiteId = 14, x = -381.4, y = -36.8, z = -301.5 },
         { name = "Natalan Swiftbeak", zoneId = 155, aetheryiteId = 23, x = 636.8, y = 289.0, z = 22.8 },
-        { name = "2nd Cohort Signifer", zoneId = 137, aetheryiteId =12, x = 120.1, y = -21.5, z = -298.6 },
+        { name = "2nd Cohort Signifer", zoneId = 137, aetheryiteId =12, x = 205.8, y = 73.9, z = -10.6 }
     },
 
     -- BOOK: Skyfire II
