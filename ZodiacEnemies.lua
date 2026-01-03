@@ -16,8 +16,8 @@ local flag = Instances.Map.Flag.Vector3
 local enemyPositions = {
     
     { name = "Sapsa Shelftooth", x = -291.4, y = -41.6, z = -359.9 },
-    { name = "Sapsa Shelftooth", x = -233.7, y = -40.1, z = -349.9 },
-    { name = "Sapsa Shelftooth", x = -318.5, y = -39.3, z = -298.1 }
+    -- { name = "Sapsa Shelftooth", x = -233.7, y = -40.1, z = -349.9 },
+    -- { name = "Sapsa Shelftooth", x = -318.5, y = -39.3, z = -298.1 }
 
 }
 
@@ -70,15 +70,16 @@ local zodiacBooks = {
 }
 
 
-function isTargetDead(target)
+function waitForTargetDeath(target)
     if target then
         while not target.IsDead do
-            Dalamud.Log(target.IsDead)
             yield("/wait 1")
         end
+
+        return true
     end
 
-    return true
+    return false
 end
 
 function moveTo(x, y, z, flying)
@@ -93,46 +94,55 @@ for i, enemy in ipairs(enemyPositions) do
         Actions.ExecuteGeneralAction(9)
     end
 
-    MoveTo(enemy.x, enemy.y, enemy.z, true)
+    moveTo(enemy.x, enemy.y, enemy.z, true)
 
-    local enemy = Entity.GetEntityByName(enemy.name)
-    local target = nil
 
     while IPC.vnavmesh.PathfindInProgress() or IPC.vnavmesh.IsRunning() do
         yield("/wait 1")
     end
 
-    local killCount
+    repeat 
+        Dalamud.Log(Player.Status.StatusId)
+        Actions.ExecuteGeneralAction(23)
+        yield("/wait 1")
+    until not Svc.Condition[4]
+
+    local killCount = 0
+    local target = nil
 
     while killCount < killsRequired do
 
         Dalamud.Log("Current kill count: " .. killCount)
+        local currentEnemy = Entity.GetEntityByName(enemy.name)
 
-        if enemy then
-            repeat 
-                Dalamud.Log(Player.Status.StatusId)
-                Actions.ExecuteGeneralAction(23)
-                yield("/wait 1")
+        if currentEnemy.CurrentHp > 0 then
 
-            until not Svc.Condition[4]
-            yield("/target " .. enemy.Name)
+            yield("/target " .. currentEnemy.Name)
             yield("/wait 1")
             target = Svc.Targets.Target
-            yield("/rsr manual")
-
-            isTargetDead(target)
-
-            yield("/battletarget")
-            target = Svc.Targets.Target
-            
-            isTargetDead(target)
-
-
         end
+
+        if target then
+
+            Dalamud.Log(target.Name)
+            Dalamud.Log(enemy.name)
+
+            yield("/rsr manual")
+            waitForTargetDeath(target)
+            yield("/rsr off")
+            killCount = killCount + 1
+            
         else
             Dalamud.Log("Waiting for enemy spawn...")
+            yield("/battletarget")
+            yield("/rsr manual")
+            target = Svc.Targets.Target
+            waitForTargetDeath(target)
+            yield("/rsr off")
             yield("/wait 5")
         end
+
+        target = nil
 
     end
 
