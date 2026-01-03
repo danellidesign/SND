@@ -29,7 +29,11 @@ local zodiacBooks = {
     -- Mor Dhona 156
     -- Outer La Noscea 180
     -- Western La Noscea 138
+    -- Eastern La Noscea 
     -- Southern Thnalan 146
+    -- East Shroud 152
+    -- Coerthas 155
+
 
     -- BOOK: Skyfire I
     SkywindII = {
@@ -45,6 +49,11 @@ local zodiacBooks = {
         { name = "Elite Quarryman", zoneId = 180, x = 160.8, y = 21.4, z = -707.4 },
         { name = "Ixali Boldwing", zoneId = 154, x = -14.5, y = -9.8, z = -40.5 },
         { name = "Hapalit", zoneId = 156, x = 479.0, y = -0.6, z = -795.7 },
+        { name = "Violet Sigh", zoneId = 152, x = 120.1, y = -21.5, z = -298.6 },
+        { name = "5th Cohort Secutor", zoneId = 156, x = -570.6, y = -2.9, z = -424.8 },
+        { name = "Axolotl", zoneId = 138, x = 120.1, y = -21.5, z = -298.6 },
+        { name = "Natalan Swiftbeak", zoneId = 155, x = 120.1, y = -21.5, z = -298.6 },
+        { name = "2nd Cohort Signifer", zoneId = 137, x = 120.1, y = -21.5, z = -298.6 },
         -- { name = "Sapsa Shelftooth", x = -233.7, y = -40.1, z = -349.9 },
         -- { name = "Sapsa Shelftooth", x = -318.5, y = -39.3, z = -298.1 },
         -- Add other Skyfire I mobs here...
