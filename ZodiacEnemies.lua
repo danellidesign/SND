@@ -42,7 +42,7 @@ if isFlag then
 
 
     for i, enemy in ipairs(enemyPositions) do
-        
+        Dalamud.Log("Enemy Nr" .. i)
         --IPC.vnavmesh.PathfindAndMoveTo(flag, true)
         IPC.vnavmesh.PathfindAndMoveTo(Vector3(enemy.x, enemy.y, enemy.z), true)
         local enemy = Entity.GetEntityByName(enemy.name)
