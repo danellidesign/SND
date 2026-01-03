@@ -135,10 +135,14 @@ for i, enemy in ipairs(enemyPositions) do
         else
             Dalamud.Log("Waiting for enemy spawn...")
             yield("/battletarget")
-            yield("/rsr manual")
+
             target = Svc.Targets.Target
-            waitForTargetDeath(target)
-            yield("/rsr off")
+            if target then
+                yield("/rsr manual")
+                waitForTargetDeath(target)
+                yield("/rsr off")
+            end
+
             yield("/wait 5")
         end
 
