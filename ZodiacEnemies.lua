@@ -33,6 +33,13 @@ local zodiacBooks = {
         -- Add other Skyfire I mobs here...
         -- { name = "U'Ghamaro Golem", x = 0.0, y = 0.0, z = 0.0 },
     },
+    SkyEarthI = {
+        { name = "Amalj'aa Scavenger", x = -49.1, y = -1.5, z = -7.3 },
+        -- { name = "Sapsa Shelftooth", x = -233.7, y = -40.1, z = -349.9 },
+        -- { name = "Sapsa Shelftooth", x = -318.5, y = -39.3, z = -298.1 },
+        -- Add other Skyfire I mobs here...
+        -- { name = "U'Ghamaro Golem", x = 0.0, y = 0.0, z = 0.0 },
+    },
 
     -- BOOK: Skyfire II
     SkyfireII = {
