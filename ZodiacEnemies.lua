@@ -25,16 +25,26 @@ local killsRequired = 3
 
 local zodiacBooks = {
 
+    -- Zones
+    -- Mor Dhona 156
+    -- Outer La Noscea 180
+    -- Western La Noscea 138
+    -- Southern Thnalan 146
+
     -- BOOK: Skyfire I
     SkywindII = {
-        { name = "Sapsa Shelftooth", x = -291.4, y = -41.6, z = -359.9 },
+        { name = "Sapsa Shelftooth", zoneId = 138, x = -291.4, y = -41.6, z = -359.9 },
         -- { name = "Sapsa Shelftooth", x = -233.7, y = -40.1, z = -349.9 },
         -- { name = "Sapsa Shelftooth", x = -318.5, y = -39.3, z = -298.1 },
         -- Add other Skyfire I mobs here...
         -- { name = "U'Ghamaro Golem", x = 0.0, y = 0.0, z = 0.0 },
     },
     SkyEarthI = {
-        { name = "Amalj'aa Scavenger", x = -49.1, y = -1.5, z = -7.3 },
+        { name = "Amalj'aa Scavenger", zoneId = 146, x = -49.1, y = -1.5, z = -7.3 },
+        { name = "Zahar'ak Pugilist", zoneId = 146, x = 111.5, y = 15.9, z = 13.8 },
+        { name = "Elite Quarryman", zoneId = 180, x = 160.8, y = 21.4, z = -707.4 },
+        { name = "Ixali Boldwing", zoneId = 154, x = -14.5, y = -9.8, z = -40.5 },
+        { name = "Hapalit", zoneId = 156, x = 479.0, y = -0.6, z = -795.7 },
         -- { name = "Sapsa Shelftooth", x = -233.7, y = -40.1, z = -349.9 },
         -- { name = "Sapsa Shelftooth", x = -318.5, y = -39.3, z = -298.1 },
         -- Add other Skyfire I mobs here...
