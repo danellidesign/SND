@@ -106,7 +106,7 @@ for i, enemy in ipairs(enemyPositions) do
 
     while killCount < killsRequired do
 
-    Dalamud.Log("Current kill count: " .. killCount)
+        Dalamud.Log("Current kill count: " .. killCount)
 
         if enemy then
             repeat 
@@ -132,6 +132,7 @@ for i, enemy in ipairs(enemyPositions) do
         else
             Dalamud.Log("Waiting for enemy spawn...")
             yield("/wait 5")
+        end
 
     end
 
