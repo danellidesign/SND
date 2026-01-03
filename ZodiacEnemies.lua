@@ -26,38 +26,35 @@ local killsRequired = 3
 local zodiacBooks = {
 
     -- Zones
-    -- Mor Dhona 156
-    -- Outer La Noscea 180
-    -- Western La Noscea 138
-    -- Eastern La Noscea 
-    -- Southern Thnalan 146
-    -- East Shroud 152
-    -- Coerthas 155
+    -- Mor Dhona 156 / 24
+    -- Outer La Noscea 180 / 16
+    -- Western La Noscea 138 / 14
+    -- Eastern La Noscea 137 / 12
+    -- Southern Thnalan 146 / 19
+    -- East Shroud 152 / 4
+    -- North Shroud 154 / 7
+    -- Coerthas 155 / 23
 
 
     -- BOOK: Skyfire I
     SkywindII = {
-        { name = "Sapsa Shelftooth", zoneId = 138, x = -291.4, y = -41.6, z = -359.9 },
+        { name = "Sapsa Shelftooth", zoneId = 138, aetheryiteId = 14, x = -291.4, y = -41.6, z = -359.9 },
         -- { name = "Sapsa Shelftooth", x = -233.7, y = -40.1, z = -349.9 },
         -- { name = "Sapsa Shelftooth", x = -318.5, y = -39.3, z = -298.1 },
         -- Add other Skyfire I mobs here...
         -- { name = "U'Ghamaro Golem", x = 0.0, y = 0.0, z = 0.0 },
     },
     SkyEarthI = {
-        { name = "Amalj'aa Scavenger", zoneId = 146, x = -49.1, y = -1.5, z = -7.3 },
-        { name = "Zahar'ak Pugilist", zoneId = 146, x = 111.5, y = 15.9, z = 13.8 },
-        { name = "Elite Quarryman", zoneId = 180, x = 160.8, y = 21.4, z = -707.4 },
-        { name = "Ixali Boldwing", zoneId = 154, x = -14.5, y = -9.8, z = -40.5 },
-        { name = "Hapalit", zoneId = 156, x = 479.0, y = -0.6, z = -795.7 },
-        { name = "Violet Sigh", zoneId = 152, x = 120.1, y = -21.5, z = -298.6 },
-        { name = "5th Cohort Secutor", zoneId = 156, x = -570.6, y = -2.9, z = -424.8 },
-        { name = "Axolotl", zoneId = 138, x = 120.1, y = -21.5, z = -298.6 },
-        { name = "Natalan Swiftbeak", zoneId = 155, x = 120.1, y = -21.5, z = -298.6 },
-        { name = "2nd Cohort Signifer", zoneId = 137, x = 120.1, y = -21.5, z = -298.6 },
-        -- { name = "Sapsa Shelftooth", x = -233.7, y = -40.1, z = -349.9 },
-        -- { name = "Sapsa Shelftooth", x = -318.5, y = -39.3, z = -298.1 },
-        -- Add other Skyfire I mobs here...
-        -- { name = "U'Ghamaro Golem", x = 0.0, y = 0.0, z = 0.0 },
+        { name = "Amalj'aa Scavenger", zoneId = 146, aetheryiteId = 19, x = -49.1, y = -1.5, z = -7.3 },
+        { name = "Zahar'ak Pugilist", zoneId = 146, aetheryiteId = 19, x = 111.5, y = 15.9, z = 13.8 },
+        { name = "Elite Quarryman", zoneId = 180, aetheryiteId = 16, x = 160.8, y = 21.4, z = -707.4 },
+        { name = "Ixali Boldwing", zoneId = 154, aetheryiteId = 7, x = -14.5, y = -9.8, z = -40.5 },
+        { name = "Hapalit", zoneId = 156, aetheryiteId = 24, x = 479.0, y = -0.6, z = -795.7 },
+        { name = "Violet Sigh", zoneId = 152, aetheryiteId = 4 x = 120.1, y = -21.5, z = -298.6 },
+        { name = "5th Cohort Secutor", zoneId = 156, aetheryiteId = 24, x = -570.6, y = -2.9, z = -424.8 },
+        { name = "Axolotl", zoneId = 138, aetheryiteId = 14, x = -381.4, y = -36.8, z = -301.5 },
+        { name = "Natalan Swiftbeak", zoneId = 155, aetheryiteId = 23, x = 636.8, y = 289.0, z = 22.8 },
+        { name = "2nd Cohort Signifer", zoneId = 137, aetheryiteId =12, x = 120.1, y = -21.5, z = -298.6 },
     },
 
     -- BOOK: Skyfire II
