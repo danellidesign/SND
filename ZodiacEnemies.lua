@@ -34,49 +34,48 @@ function isTargetDead(target)
 end
 
 
-if isFlag then
+
+
+for i, enemy in ipairs(enemyPositions) do
+    Dalamud.Log("Enemy Nr" .. i)
 
     if not Svc.Condition[4] then
         Actions.ExecuteGeneralAction(9)
     end
+    
+    IPC.vnavmesh.PathfindAndMoveTo(Vector3(enemy.x, enemy.y, enemy.z), true)
+    local enemy = Entity.GetEntityByName(enemy.name)
+    local target = nil
 
-
-    for i, enemy in ipairs(enemyPositions) do
-        Dalamud.Log("Enemy Nr" .. i)
-        --IPC.vnavmesh.PathfindAndMoveTo(flag, true)
-        IPC.vnavmesh.PathfindAndMoveTo(Vector3(enemy.x, enemy.y, enemy.z), true)
-        local enemy = Entity.GetEntityByName(enemy.name)
-        local target = nil
-    
-        while IPC.vnavmesh.PathfindInProgress() or IPC.vnavmesh.IsRunning() do
-            yield("/wait 1")
-        end
-    
-        if enemy then
-            repeat 
-                Dalamud.Log(Player.Status.StatusId)
-                Actions.ExecuteGeneralAction(23)
-                yield("/wait 1")
-    
-            until not Svc.Condition[4]
-            yield("/target " .. enemy.Name)
-            yield("/wait 1")
-            target = Svc.Targets.Target
-            yield("/rsr manual")
-    
-            isTargetDead(target)
-    
-            yield("/battletarget")
-            target = Svc.Targets.Target
-            
-            isTargetDead(target)
-    
-    
-            Dalamud.Log("Ende")
-            yield("/rsr off")
-    
-    
-        end
+    while IPC.vnavmesh.PathfindInProgress() or IPC.vnavmesh.IsRunning() do
+        yield("/wait 1")
     end
-    
+
+    if enemy then
+        repeat 
+            Dalamud.Log(Player.Status.StatusId)
+            Actions.ExecuteGeneralAction(23)
+            yield("/wait 1")
+
+        until not Svc.Condition[4]
+        yield("/target " .. enemy.Name)
+        yield("/wait 1")
+        target = Svc.Targets.Target
+        yield("/rsr manual")
+
+        isTargetDead(target)
+
+        yield("/battletarget")
+        target = Svc.Targets.Target
+        
+        isTargetDead(target)
+
+
+        Dalamud.Log("Ende")
+        yield("/rsr off")
+
+
+    end
 end
+    
+
