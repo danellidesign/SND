@@ -18,6 +18,7 @@ local zodiacBooks = {
     -- Southern Thnalan 146 / 19
     -- Northern Thanalan 147 / 22
     -- East Shroud 152 / 4
+    -- South Shroud 153 / 5
     -- North Shroud 154 / 7
     -- Coerthas 155 / 23
 
@@ -56,18 +57,28 @@ local zodiacBooks = {
     SkyfireII = {
         { name = "Raging Harrier", zoneId = 156, aetheryiteId = 24, x = -215.7, y = -3.4, z = -288.2 },
         { name = "Biast", zoneId = 155, aetheryiteId = 23, x = -362.1, y = 237.2, z = 389.3 },
-        { name = "Natalan Boldwing", zoneId = 155, aetheryiteId = 23, x = 381.6, y = 76.4, z = -22.8 },
-        { name = "Dullahan", zoneId = 154, aetheryiteId = 7, x = -278.8, y = 262.0, z = 326.8 },
-        { name = "U'Ghamaro Golem", zoneId = 180, aetheryiteId = 16, x = -208.6, y = -42.2, z = -233.0 },
-        { name = "Sylpheed Sigh", zoneId = 152, aetheryiteId = 4, x = -529.1, y = 51.7, z = -775.3 },
-        { name = "Shoaltooth Sahagin", zoneId = 138, aetheryiteId = 14, x = 32.5, y = 11.2, z = 257.3 },
-        { name = "Shelfscale Reaver", zoneId = 138, aetheryiteId = 14, x = -9.6, y = 37.8, z = 206.8 },
-        { name = "Tempered Gladiator", zoneId = 146, aetheryiteId = 19, x = 76.6, y = 24.0, z = -716.8 },
-        { name = "Zahar'ak Archer", zoneId = 146, aetheryiteId = 19, x = 133.9, y = -29.0, z = -223.5 }
+        { name = "Natalan Boldwing", zoneId = 155, aetheryiteId = 23, x = 656.9, y = 286.1, z = 53.2 },
+        { name = "Dullahan", zoneId = 154, aetheryiteId = 7, x = 76.6, y = 7.3, z = -62.7 },
+        { name = "U'Ghamaro Golem", zoneId = 180, aetheryiteId = 16, x = 290.7, y = 21.5, z = -711.7 },
+        { name = "Sylpheed Sigh", zoneId = 152, aetheryiteId = 4, x = 399.1, y = -27.6, z = -487.1 },
+        { name = "Shoaltooth Sahagin", zoneId = 138, aetheryiteId = 14, x = -184.4, y = -42.3, z = -277.0 },
+        { name = "Shelfscale Reaver", zoneId = 138, aetheryiteId = 14, x = -428.8, y = -40.8, z = -225.4 },
+        { name = "Tempered Gladiator", zoneId = 146, aetheryiteId = 19, x = 39.7, y = 23.5, z = -136.1 },
+        { name = "Zahar'ak Archer", zoneId = 146, aetheryiteId = 19, x = 269.9, y = 11.4, z = -12.8 }
     },
 
     -- BOOK: Netherfire I
     NetherfireI = {
+        { name = "Wild Hog", zoneId = 153, aetheryiteId = 5, x = -215.7, y = -3.4, z = -288.2 },
+        { name = "Sylpheed Screch", zoneId = 152, aetheryiteId = 4, x = -362.1, y = 237.2, z = 389.3 },
+        { name = "Gigas Bonze", zoneId = 156, aetheryiteId = 24, x = 358.4, y = -5.7, z = -465.6 },
+        { name = "Dullahan", zoneId = 154, aetheryiteId = 7, x = 76.6, y = 7.3, z = -62.7 },
+        { name = "U'Ghamaro Golem", zoneId = 180, aetheryiteId = 16, x = 290.7, y = 21.5, z = -711.7 },
+        { name = "Sylpheed Sigh", zoneId = 152, aetheryiteId = 4, x = 399.1, y = -27.6, z = -487.1 },
+        { name = "Shoaltooth Sahagin", zoneId = 138, aetheryiteId = 14, x = -184.4, y = -42.3, z = -277.0 },
+        { name = "Shelfscale Reaver", zoneId = 138, aetheryiteId = 14, x = -428.8, y = -40.8, z = -225.4 },
+        { name = "Tempered Gladiator", zoneId = 146, aetheryiteId = 19, x = 39.7, y = 23.5, z = -136.1 },
+        { name = "Zahar'ak Archer", zoneId = 146, aetheryiteId = 19, x = 269.9, y = 11.4, z = -12.8 }
     },
 
     -- BOOK: Netherfire I
@@ -95,7 +106,7 @@ local zodiacBooks = {
     }
 }
 
-local currentBook = "SkyfireII"
+local currentBook = "NetherfireI"
 local stopDistance = 3.0    -- How close to get to the flag
 local useFlying = true     -- Set to true if you want to try flying (requires flight unlocked)
 local killsRequired = 3
