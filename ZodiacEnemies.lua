@@ -1,27 +1,11 @@
 --[[
-    Move to Map Flag (vnavmesh)
-    Author: LOL
-    Description: Reads the current map flag and paths to it automatically.
+    Zodiac books enemy helper
+    Author: danellidesign
+    Description: Helps reducing the pain :)
 ]]
 
 -- SETTINGS
 import("System.Numerics")
-
-local stopDistance = 3.0    -- How close to get to the flag
-local useFlying = true     -- Set to true if you want to try flying (requires flight unlocked)
-
-local isFlag = Instances.Map.IsFlagMarkerSet
-local flag = Instances.Map.Flag.Vector3
-
-local enemyPositions = {
-    
-    { name = "Sapsa Shelftooth", x = -291.4, y = -41.6, z = -359.9 },
-    -- { name = "Sapsa Shelftooth", x = -233.7, y = -40.1, z = -349.9 },
-    -- { name = "Sapsa Shelftooth", x = -318.5, y = -39.3, z = -298.1 }
-
-}
-
-local killsRequired = 3
 
 local zodiacBooks = {
 
@@ -30,7 +14,9 @@ local zodiacBooks = {
     -- Outer La Noscea 180 / 16
     -- Western La Noscea 138 / 14
     -- Eastern La Noscea 137 / 12
+    -- Western Thanalan 140 / 17
     -- Southern Thnalan 146 / 19
+    -- Northern Thanalan 147 / 22
     -- East Shroud 152 / 4
     -- North Shroud 154 / 7
     -- Coerthas 155 / 23
@@ -39,11 +25,8 @@ local zodiacBooks = {
     -- BOOK: Skyfire I
     SkywindII = {
         { name = "Sapsa Shelftooth", zoneId = 138, aetheryiteId = 14, x = -291.4, y = -41.6, z = -359.9 },
-        -- { name = "Sapsa Shelftooth", x = -233.7, y = -40.1, z = -349.9 },
-        -- { name = "Sapsa Shelftooth", x = -318.5, y = -39.3, z = -298.1 },
-        -- Add other Skyfire I mobs here...
-        -- { name = "U'Ghamaro Golem", x = 0.0, y = 0.0, z = 0.0 },
     },
+    -- BOOK: Skyearth I
     SkyEarthI = {
         { name = "Amalj'aa Scavenger", zoneId = 146, aetheryiteId = 19, x = -49.1, y = -1.5, z = -7.3 },
         { name = "Zahar'ak Pugilist", zoneId = 146, aetheryiteId = 19, x = 111.5, y = 15.9, z = 13.8 },
@@ -56,15 +39,25 @@ local zodiacBooks = {
         { name = "Natalan Swiftbeak", zoneId = 155, aetheryiteId = 23, x = 636.8, y = 289.0, z = 22.8 },
         { name = "2nd Cohort Signifer", zoneId = 137, aetheryiteId =12, x = 205.8, y = 73.9, z = -10.6 }
     },
-
+    -- BOOK: Skyfire I
+    SkyfireI = {
+        { name = "Daring Harrier", zoneId = 156, aetheryiteId = 24, x = -49.1, y = -1.5, z = -7.3 },
+        { name = "5th Cohort Vanguard", zoneId = 156, aetheryiteId = 24, x = -49.1, y = -1.5, z = -7.3 },
+        { name = "Giant Logger", zoneId = 155, aetheryiteId = 23, x = -49.1, y = -1.5, z = -7.3 },
+        { name = "Shoalspine Sahagin", zoneId = 138, aetheryiteId = 14, x = -49.1, y = -1.5, z = -7.3 },
+        { name = "4th Cohort Hoplomachus", zoneId = 140, aetheryiteId = 17, x = -49.1, y = -1.5, z = -7.3 },
+        { name = "Basilisk", zoneId = 147, aetheryiteId = 22, x = -49.1, y = -1.5, z = -7.3 },
+        { name = "Zan'rak Pugilist", zoneId = 146, aetheryiteId = 19, x = -49.1, y = -1.5, z = -7.3 },
+        { name = "Synthetic Doblin", zoneId = 180, aetheryiteId = 16, x = -49.1, y = -1.5, z = -7.3 },
+        { name = "Milkroot Cluster", zoneId = 152, aetheryiteId = 4, x = -49.1, y = -1.5, z = -7.3 },
+        { name = "2nd Cohort Hoplomachus", zoneId = 137, aetheryiteId = 12, x = -49.1, y = -1.5, z = -7.3 },
+    },
     -- BOOK: Skyfire II
     SkyfireII = {
-        -- { name = "Giant Logger", x = 123.4, y = 50.0, z = 321.0 },
     },
 
     -- BOOK: Netherfire I
     NetherfireI = {
-        -- { name = "Violet Screech", x = 0.0, y = 0.0, z = 0.0 },
     },
 
     -- BOOK: Netherfire I
@@ -92,6 +85,14 @@ local zodiacBooks = {
     }
 }
 
+local currentBook = "SkyfireI"
+local stopDistance = 3.0    -- How close to get to the flag
+local useFlying = true     -- Set to true if you want to try flying (requires flight unlocked)
+local killsRequired = 3
+local isFlag = Instances.Map.IsFlagMarkerSet
+local flag = Instances.Map.Flag.Vector3
+
+local selectedList = zodiacBooks[currentBook]
 
 function waitForTargetDeath(target)
     if target then
@@ -110,21 +111,23 @@ function moveTo(x, y, z, flying)
 end
 
 
-for i, enemy in ipairs(enemyPositions) do
+for i, enemy in ipairs(selectedList) do
 
+    -- Check if player is in zone. If not, teleport to it
     while Svc.ClientState.TerritoryType ~= enemy.zoneId and not Svc.Condition[27] do
         IPC.Lifestream.Teleport(enemy.aetheryiteId, 0)
-        Dalamud.Log("Teleporting")
+        Dalamud.Log("Teleporting to " .. enemy.name)
         yield("/wait 15")
     end
 
+    -- Mount up
     if not Svc.Condition[4] then
         Actions.ExecuteGeneralAction(9)
     end
 
     moveTo(enemy.x, enemy.y, enemy.z, true)
 
-
+    -- Wait for finishing moving to destination
     while IPC.vnavmesh.PathfindInProgress() or IPC.vnavmesh.IsRunning() do
         yield("/wait 1")
     end
