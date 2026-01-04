@@ -43,14 +43,14 @@ local zodiacBooks = {
     SkyfireI = {
         { name = "Daring Harrier", zoneId = 156, aetheryiteId = 24, x = -215.7, y = -3.4, z = -288.2 },
         { name = "5th Cohort Vanguard", zoneId = 156, aetheryiteId = 24, x = -545.1, y = -1.7, z = -308.5 },
-        { name = "Giant Logger", zoneId = 155, aetheryiteId = 23, x = -49.1, y = -1.5, z = -7.3 },
-        { name = "Shoalspine Sahagin", zoneId = 138, aetheryiteId = 14, x = -49.1, y = -1.5, z = -7.3 },
-        { name = "4th Cohort Hoplomachus", zoneId = 140, aetheryiteId = 17, x = -49.1, y = -1.5, z = -7.3 },
-        { name = "Basilisk", zoneId = 147, aetheryiteId = 22, x = -49.1, y = -1.5, z = -7.3 },
-        { name = "Zan'rak Pugilist", zoneId = 146, aetheryiteId = 19, x = -49.1, y = -1.5, z = -7.3 },
-        { name = "Synthetic Doblin", zoneId = 180, aetheryiteId = 16, x = -49.1, y = -1.5, z = -7.3 },
-        { name = "Milkroot Cluster", zoneId = 152, aetheryiteId = 4, x = -49.1, y = -1.5, z = -7.3 },
-        { name = "2nd Cohort Hoplomachus", zoneId = 137, aetheryiteId = 12, x = -49.1, y = -1.5, z = -7.3 }
+        { name = "Giant Logger", zoneId = 155, aetheryiteId = 23, x = -278.8, y = 262.0, z = 326.8 },
+        { name = "Shoalspine Sahagin", zoneId = 138, aetheryiteId = 14, x = -208.6, y = -42.2, z = -233.0 },
+        { name = "4th Cohort Hoplomachus", zoneId = 140, aetheryiteId = 17, x = -529.1, y = 51.7, z = -775.3 },
+        { name = "Basilisk", zoneId = 147, aetheryiteId = 22, x = 32.5, y = 11.2, z = 257.3 },
+        { name = "Zanr'ak Pugilist", zoneId = 146, aetheryiteId = 19, x = -9.6, y = 37.8, z = 206.8 },
+        { name = "Synthetic Doblyn", zoneId = 180, aetheryiteId = 16, x = 76.6, y = 24.0, z = -716.8 },
+        { name = "Milkroot Cluster", zoneId = 152, aetheryiteId = 4, x = 133.9, y = -29.0, z = -223.5 },
+        { name = "2nd Cohort Hoplomachus", zoneId = 137, aetheryiteId = 12, x = 381.6, y = 76.4, z = -22.8 }
     },
     -- BOOK: Skyfire II
     SkyfireII = {
@@ -121,9 +121,10 @@ for i, enemy in ipairs(selectedList) do
     end
 
     -- Mount up
-    if not Svc.Condition[4] then
+    repeat 
         Actions.ExecuteGeneralAction(9)
-    end
+        yield("/wait 1")
+    until Svc.Condition[4]
 
     moveTo(enemy.x, enemy.y, enemy.z, true)
 
@@ -132,6 +133,7 @@ for i, enemy in ipairs(selectedList) do
         yield("/wait 1")
     end
 
+    -- Dismount
     repeat 
         Dalamud.Log(Player.Status.StatusId)
         Actions.ExecuteGeneralAction(23)
