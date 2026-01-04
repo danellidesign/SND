@@ -69,20 +69,20 @@ local zodiacBooks = {
 
     -- BOOK: Netherfire I
     NetherfireI = {
-        { name = "Wild Hog", zoneId = 153, aetheryiteId = 5, x = -215.7, y = -3.4, z = -288.2 },
-        { name = "Sylpheed Screch", zoneId = 152, aetheryiteId = 4, x = -362.1, y = 237.2, z = 389.3 },
+        { name = "Wild Hog", zoneId = 153, aetheryiteId = 5, x = 467.0, y = 2.7, z = 170.5 },
+        { name = "Sylpheed Screech", zoneId = 152, aetheryiteId = 4, x = 434.8, y = -28.2, z = -469.8 },
         { name = "Gigas Bonze", zoneId = 156, aetheryiteId = 24, x = 358.4, y = -5.7, z = -465.6 },
-        { name = "Dullahan", zoneId = 154, aetheryiteId = 7, x = 76.6, y = 7.3, z = -62.7 },
-        { name = "U'Ghamaro Golem", zoneId = 180, aetheryiteId = 16, x = 290.7, y = 21.5, z = -711.7 },
-        { name = "Sylpheed Sigh", zoneId = 152, aetheryiteId = 4, x = 399.1, y = -27.6, z = -487.1 },
-        { name = "Shoaltooth Sahagin", zoneId = 138, aetheryiteId = 14, x = -184.4, y = -42.3, z = -277.0 },
-        { name = "Shelfscale Reaver", zoneId = 138, aetheryiteId = 14, x = -428.8, y = -40.8, z = -225.4 },
-        { name = "Tempered Gladiator", zoneId = 146, aetheryiteId = 19, x = 39.7, y = 23.5, z = -136.1 },
-        { name = "Zahar'ak Archer", zoneId = 146, aetheryiteId = 19, x = 269.9, y = 11.4, z = -12.8 }
+        { name = "Hexing Harrier", zoneId = 156, aetheryiteId = 24, x = -221.5, y = 18.4, z = -222.7 },
+        { name = "Zahar'ak Fortune-Teller", zoneId = 146, aetheryiteId = 19, x = 410.2, y = 12.5, z = -112.6 },
+        { name = "Tempered Orator", zoneId = 146, aetheryiteId = 19, x = -1.0, y = 8.6, z = -92.1 },
+        { name = "Giant Lugger", zoneId = 155, aetheryiteId = 23, x = -465.7, y = 271.6, z = 253.6 },
+        { name = "U'Ghamaro Roundsman", zoneId = 180, aetheryiteId = 16, x = 107.8, y = 24.4, z = -719.3 },
+        { name = "Shelfclaw Reaver", zoneId = 138, aetheryiteId = 14, x = -430.2, y = -40.8, z = -221.0 },
+        { name = "2nd Cohort Laquearius", zoneId = 137, aetheryiteId = 12, x = 306.4, y = 76.5, z = -15.0 }
     },
 
-    -- BOOK: Netherfire I
-    NetherfireII = {
+    -- BOOK: Skyfall I
+    SkyfallI = {
     },
 
     -- BOOK: Fallgourd I
@@ -106,7 +106,7 @@ local zodiacBooks = {
     }
 }
 
-local currentBook = "NetherfireI"
+local currentBook = "SkyfallI"
 local stopDistance = 3.0    -- How close to get to the flag
 local useFlying = true     -- Set to true if you want to try flying (requires flight unlocked)
 local killsRequired = 3
