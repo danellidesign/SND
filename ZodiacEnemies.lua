@@ -54,6 +54,16 @@ local zodiacBooks = {
     },
     -- BOOK: Skyfire II
     SkyfireII = {
+        { name = "Raging Harrier", zoneId = 156, aetheryiteId = 24, x = -215.7, y = -3.4, z = -288.2 },
+        { name = "Biast", zoneId = 155, aetheryiteId = 23, x = -545.1, y = -1.7, z = -308.5 },
+        { name = "Natalan Boldwing", zoneId = 155, aetheryiteId = 23, x = 381.6, y = 76.4, z = -22.8 },
+        { name = "Dullahan", zoneId = 154, aetheryiteId = 7, x = -278.8, y = 262.0, z = 326.8 },
+        { name = "U'Ghamaro Golem", zoneId = 180, aetheryiteId = 16, x = -208.6, y = -42.2, z = -233.0 },
+        { name = "Sylpheed Sigh", zoneId = 152, aetheryiteId = 4, x = -529.1, y = 51.7, z = -775.3 },
+        { name = "Shoaltooth Sahagin", zoneId = 138, aetheryiteId = 14, x = 32.5, y = 11.2, z = 257.3 },
+        { name = "Shelfscale Reaver", zoneId = 138, aetheryiteId = 14, x = -9.6, y = 37.8, z = 206.8 },
+        { name = "Tempered Gladiator", zoneId = 146, aetheryiteId = 19, x = 76.6, y = 24.0, z = -716.8 },
+        { name = "Zahar'ak Archer", zoneId = 146, aetheryiteId = 19, x = 133.9, y = -29.0, z = -223.5 }
     },
 
     -- BOOK: Netherfire I
