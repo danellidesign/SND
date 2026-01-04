@@ -186,11 +186,15 @@ for i, enemy in ipairs(selectedList) do
             
         else
             Dalamud.Log("Waiting for enemy spawn...")
-            yield("/battletarget")
 
-            target = Svc.Targets.Target
-            if target then
-                moveAndKill(target)
+            while Svc.Condition[26] do
+                Dalamud.Log("Cleaning up enemies")
+                yield("/battletarget")
+
+                target = Svc.Targets.Target
+                if target then
+                    moveAndKill(target)
+                end
             end
 
             yield("/wait 5")
