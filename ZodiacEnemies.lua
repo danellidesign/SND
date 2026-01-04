@@ -150,6 +150,7 @@ for i, enemy in ipairs(selectedList) do
 
             yield("/target " .. currentEnemy.Name)
             yield("/wait 1")
+        
             target = Svc.Targets.Target
         end
 
@@ -158,7 +159,9 @@ for i, enemy in ipairs(selectedList) do
             Dalamud.Log(target.Name)
             Dalamud.Log(enemy.name)
 
+            yield("/vnav movetarget")
             yield("/rsr manual")
+            yield("/send NUMPAD0")
             waitForTargetDeath(target)
             yield("/rsr off")
             killCount = killCount + 1
@@ -169,7 +172,9 @@ for i, enemy in ipairs(selectedList) do
 
             target = Svc.Targets.Target
             if target then
+                yield("/vnav movetarget")
                 yield("/rsr manual")
+                yield("/send NUMPAD0")
                 waitForTargetDeath(target)
                 yield("/rsr off")
             end
