@@ -55,7 +55,7 @@ local zodiacBooks = {
     -- BOOK: Skyfire II
     SkyfireII = {
         { name = "Raging Harrier", zoneId = 156, aetheryiteId = 24, x = -215.7, y = -3.4, z = -288.2 },
-        { name = "Biast", zoneId = 155, aetheryiteId = 23, x = -545.1, y = -1.7, z = -308.5 },
+        { name = "Biast", zoneId = 155, aetheryiteId = 23, x = -362.1, y = 237.2, z = 389.3 },
         { name = "Natalan Boldwing", zoneId = 155, aetheryiteId = 23, x = 381.6, y = 76.4, z = -22.8 },
         { name = "Dullahan", zoneId = 154, aetheryiteId = 7, x = -278.8, y = 262.0, z = 326.8 },
         { name = "U'Ghamaro Golem", zoneId = 180, aetheryiteId = 16, x = -208.6, y = -42.2, z = -233.0 },
@@ -95,7 +95,7 @@ local zodiacBooks = {
     }
 }
 
-local currentBook = "SkyfireI"
+local currentBook = "SkyfireII"
 local stopDistance = 3.0    -- How close to get to the flag
 local useFlying = true     -- Set to true if you want to try flying (requires flight unlocked)
 local killsRequired = 3
@@ -186,22 +186,25 @@ for i, enemy in ipairs(selectedList) do
             
         else
             Dalamud.Log("Waiting for enemy spawn...")
-
-            while Svc.Condition[26] do
-                Dalamud.Log("Cleaning up enemies")
-                yield("/battletarget")
-
-                target = Svc.Targets.Target
-                if target then
-                    moveAndKill(target)
-                end
-            end
-
             yield("/wait 5")
         end
 
         target = nil
 
+        
+
+    end
+
+    -- clean up potential adds
+    while Svc.Condition[26] do
+        Dalamud.Log("Cleaning up enemies")
+        yield("/battletarget")
+
+        target = Svc.Targets.Target
+        if target then
+            moveAndKill(target)
+        end
+        yield("/wait 1")
     end
 
     Dalamud.Log("Ende")
