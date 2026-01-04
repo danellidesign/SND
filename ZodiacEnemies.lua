@@ -33,16 +33,16 @@ local zodiacBooks = {
         { name = "Elite Quarryman", zoneId = 180, aetheryiteId = 16, x = 160.8, y = 21.4, z = -707.4 },
         { name = "Ixali Boldwing", zoneId = 154, aetheryiteId = 7, x = -14.5, y = -9.8, z = -40.5 },
         { name = "Hapalit", zoneId = 156, aetheryiteId = 24, x = 479.0, y = -0.6, z = -795.7 },
-        { name = "Violet Sigh", zoneId = 152, aetheryiteId = 4 x = 120.1, y = -21.5, z = -298.6 },
+        { name = "Violet Sigh", zoneId = 152, aetheryiteId = 4, x = 120.1, y = -21.5, z = -298.6 },
         { name = "5th Cohort Secutor", zoneId = 156, aetheryiteId = 24, x = -570.6, y = -2.9, z = -424.8 },
         { name = "Axolotl", zoneId = 138, aetheryiteId = 14, x = -381.4, y = -36.8, z = -301.5 },
         { name = "Natalan Swiftbeak", zoneId = 155, aetheryiteId = 23, x = 636.8, y = 289.0, z = 22.8 },
-        { name = "2nd Cohort Signifer", zoneId = 137, aetheryiteId =12, x = 205.8, y = 73.9, z = -10.6 }
+        { name = "2nd Cohort Signifer", zoneId = 137, aetheryiteId = 12, x = 205.8, y = 73.9, z = -10.6 }
     },
     -- BOOK: Skyfire I
     SkyfireI = {
-        { name = "Daring Harrier", zoneId = 156, aetheryiteId = 24, x = -49.1, y = -1.5, z = -7.3 },
-        { name = "5th Cohort Vanguard", zoneId = 156, aetheryiteId = 24, x = -49.1, y = -1.5, z = -7.3 },
+        { name = "Daring Harrier", zoneId = 156, aetheryiteId = 24, x = -215.7, y = -3.4, z = -288.2 },
+        { name = "5th Cohort Vanguard", zoneId = 156, aetheryiteId = 24, x = -545.1, y = -1.7, z = -308.5 },
         { name = "Giant Logger", zoneId = 155, aetheryiteId = 23, x = -49.1, y = -1.5, z = -7.3 },
         { name = "Shoalspine Sahagin", zoneId = 138, aetheryiteId = 14, x = -49.1, y = -1.5, z = -7.3 },
         { name = "4th Cohort Hoplomachus", zoneId = 140, aetheryiteId = 17, x = -49.1, y = -1.5, z = -7.3 },
@@ -50,7 +50,7 @@ local zodiacBooks = {
         { name = "Zan'rak Pugilist", zoneId = 146, aetheryiteId = 19, x = -49.1, y = -1.5, z = -7.3 },
         { name = "Synthetic Doblin", zoneId = 180, aetheryiteId = 16, x = -49.1, y = -1.5, z = -7.3 },
         { name = "Milkroot Cluster", zoneId = 152, aetheryiteId = 4, x = -49.1, y = -1.5, z = -7.3 },
-        { name = "2nd Cohort Hoplomachus", zoneId = 137, aetheryiteId = 12, x = -49.1, y = -1.5, z = -7.3 },
+        { name = "2nd Cohort Hoplomachus", zoneId = 137, aetheryiteId = 12, x = -49.1, y = -1.5, z = -7.3 }
     },
     -- BOOK: Skyfire II
     SkyfireII = {
