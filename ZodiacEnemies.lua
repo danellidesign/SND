@@ -97,6 +97,9 @@ local selectedList = zodiacBooks[currentBook]
 function waitForTargetDeath(target)
     if target then
         while not target.IsDead do
+            yield("/vnav stop")
+            yield("/vnav movetarget")
+            yield("/send NUMPAD0")
             yield("/wait 1")
         end
 
@@ -108,6 +111,12 @@ end
 
 function moveTo(x, y, z, flying)
     IPC.vnavmesh.PathfindAndMoveTo(Vector3(x, y, z), true)
+end
+
+function moveAndKill(target)
+    yield("/rsr manual")
+    waitForTargetDeath(target)
+    yield("/rsr off")
 end
 
 
@@ -161,11 +170,8 @@ for i, enemy in ipairs(selectedList) do
             Dalamud.Log(target.Name)
             Dalamud.Log(enemy.name)
 
-            yield("/vnav movetarget")
-            yield("/rsr manual")
-            yield("/send NUMPAD0")
-            waitForTargetDeath(target)
-            yield("/rsr off")
+            moveAndKill(target)
+
             killCount = killCount + 1
             
         else
@@ -174,11 +180,7 @@ for i, enemy in ipairs(selectedList) do
 
             target = Svc.Targets.Target
             if target then
-                yield("/vnav movetarget")
-                yield("/rsr manual")
-                yield("/send NUMPAD0")
-                waitForTargetDeath(target)
-                yield("/rsr off")
+                moveAndKill(target)
             end
 
             yield("/wait 5")
