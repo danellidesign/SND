@@ -111,16 +111,16 @@ local zodiacBooks = {
 
     -- BOOK: Netherfall I
     NetherfallI = {
-        { name = "5th Cohort Laquearius", zoneId = 156, aetheryiteId = 24, x = -267.8, y = 7.8, z = 160.1 },
-        { name = "Gigas Sozu", zoneId = 156, aetheryiteId = 24, x = 556.2, y = 21.8, z = 120.5 },
-        { name = "Snow Wolf", zoneId = 155, aetheryiteId = 23, x = 83.8, y = 39.8, z = -577.4 },
-        { name = "U'Ghamaro Priest", zoneId = 180, aetheryiteId = 16, x = -502.2, y = 51.4, z = -751.9 },
-        { name = "4th Cohort Secutor", zoneId = 140, aetheryiteId = 17, x = 595.9, y = -3.0, z = -309.3 },
-        { name = "Amalj'aa Brigand", zoneId = 146, aetheryiteId = 19, x = -460.0, y = -7.8, z = -467.1 },
-        { name = "Ixali Windtalon", zoneId = 154, aetheryiteId = 7, x = 210.8, y = -20.7, z = -406.0 },
-        { name = "Lesser Kalong", zoneId = 153, aetheryiteId = 5, x = 649.3, y = 288.4, z = 20.7 },
-        { name = "Violet Screech", zoneId = 152, aetheryiteId = 4, x = -399.1, y = -41.0, z = -216.9 },
-        { name = "Sapsa Shelfclaw", zoneId = 138, aetheryiteId = 14, x = -350.9, y = -39.5, z = -359.9 }
+        { name = "5th Cohort Laquearius", zoneId = 156, aetheryiteId = 24, x = -506.7, y = -4.3, z = -423.9 },
+        { name = "Gigas Sozu", zoneId = 156, aetheryiteId = 24, x = 371.3, y = -15.9, z = -402.0 },
+        { name = "Snow Wolf", zoneId = 155, aetheryiteId = 23, x = -252.3, y = 224.9, z = 534.9 },
+        { name = "U'Ghamaro Priest", zoneId = 180, aetheryiteId = 16, x = 24.7, y = 21.5, z = -774.4 },
+        { name = "4th Cohort Secutor", zoneId = 140, aetheryiteId = 17, x = -615.5, y = 59.9, z = -765.0 },
+        { name = "Amalj'aa Brigand", zoneId = 146, aetheryiteId = 19, x = -10.6, y = 0.33, z = 2.5 },
+        { name = "Ixali Windtalon", zoneId = 154, aetheryiteId = 7, x = -41.1, y = -11.1, z = -132.0 },
+        { name = "Lesser Kalong", zoneId = 153, aetheryiteId = 5, x = 570.2, y = 21.7, z = 113.5 },
+        { name = "Violet Screech", zoneId = 152, aetheryiteId = 4, x = 162.4, y = -26.3, z = -523.9 },
+        { name = "Sapsa Shelfclaw", zoneId = 138, aetheryiteId = 14, x = -275.7, y = -41.9, z = -350.1 }
     },
 
     -- BOOK: Fallgourd II
