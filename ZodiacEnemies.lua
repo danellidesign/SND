@@ -109,8 +109,18 @@ local zodiacBooks = {
         { name = "Natalan Watchwolf", zoneId = 155, aetheryiteId = 23, x = 649.3, y = 288.4, z = 20.7 }
     },
 
-    -- BOOK: Fallgourd I
-    FallgourdI = {
+    -- BOOK: Netherfall I
+    NetherfallI = {
+        { name = "5th Cohort Laquearius", zoneId = 156, aetheryiteId = 24, x = -267.8, y = 7.8, z = 160.1 },
+        { name = "Gigas Sozu", zoneId = 156, aetheryiteId = 24, x = 556.2, y = 21.8, z = 120.5 },
+        { name = "Snow Wolf", zoneId = 155, aetheryiteId = 23, x = 83.8, y = 39.8, z = -577.4 },
+        { name = "U'Ghamaro Priest", zoneId = 180, aetheryiteId = 16, x = -502.2, y = 51.4, z = -751.9 },
+        { name = "4th Cohort Secutor", zoneId = 140, aetheryiteId = 17, x = 595.9, y = -3.0, z = -309.3 },
+        { name = "Amalj'aa Brigand", zoneId = 146, aetheryiteId = 19, x = -460.0, y = -7.8, z = -467.1 },
+        { name = "Ixali Windtalon", zoneId = 154, aetheryiteId = 7, x = 210.8, y = -20.7, z = -406.0 },
+        { name = "Lesser Kalong", zoneId = 153, aetheryiteId = 5, x = 649.3, y = 288.4, z = 20.7 },
+        { name = "Violet Screech", zoneId = 152, aetheryiteId = 4, x = -399.1, y = -41.0, z = -216.9 },
+        { name = "Sapsa Shelfclaw", zoneId = 138, aetheryiteId = 14, x = -350.9, y = -39.5, z = -359.9 }
     },
 
     -- BOOK: Fallgourd II
@@ -130,7 +140,7 @@ local zodiacBooks = {
     }
 }
 
-local currentBook = "SkyfallII"
+local currentBook = "NetherfallI"
 local stopDistance = 3.0    -- How close to get to the flag
 local useFlying = true     -- Set to true if you want to try flying (requires flight unlocked)
 local killsRequired = 3
