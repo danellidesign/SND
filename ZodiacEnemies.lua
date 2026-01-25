@@ -97,16 +97,16 @@ local zodiacBooks = {
 
     -- BOOK: Skyfall II
     SkyfallII = {
-        { name = "Iron Tortoise", zoneId = 146, aetheryiteId = 19, x = -80.7, y = -28.7, z = -132.1 },
-        { name = "Ked", zoneId = 153, aetheryiteId = 5, x = -352.1, y = -39.0, z = -222.3 },
-        { name = "U'Ghamaro Bedesman", zoneId = 180, aetheryiteId = 16, x = 87.0, y = 24.8, z = -701.5 },
-        { name = "4th Cohort Laquearius", zoneId = 140, aetheryiteId = 17, x = -124.9, y = 12.2, z = 78.8 },
-        { name = "Gigas Bikkhus", zoneId = 156, aetheryiteId = 24, x = -218.7, y = 80.2, z = -229.8 },
-        { name = "5th Cohort Hoplomachus", zoneId = 156, aetheryiteId = 24, x = -364.5, y = -5.6, z = -533.9 },
-        { name = "Sylph Bonnet", zoneId = 152, aetheryiteId = 4, x = 157.4, y = -25.5, z = -511.9 },
-        { name = "Shelfeye Reaver", zoneId = 138, aetheryiteId = 14, x = 214.7, y = -23.8, z = -443.4 },
-        { name = "Sapsa Shelfscale", zoneId = 138, aetheryiteId = 14, x = -422.9, y = 240.1, z = 327.9 },
-        { name = "Natalan Watchwolf", zoneId = 155, aetheryiteId = 23, x = 306.4, y = 76.5, z = -15.0 }
+        { name = "Iron Tortoise", zoneId = 146, aetheryiteId = 19, x = -267.8, y = 7.8, z = 160.1 },
+        { name = "Ked", zoneId = 153, aetheryiteId = 5, x = 556.2, y = 21.8, z = 120.5 },
+        { name = "U'Ghamaro Bedesman", zoneId = 180, aetheryiteId = 16, x = 83.8, y = 39.8, z = -577.4 },
+        { name = "4th Cohort Laquearius", zoneId = 140, aetheryiteId = 17, x = -502.2, y = 51.4, z = -751.9 },
+        { name = "Gigas Bhikkhu", zoneId = 156, aetheryiteId = 24, x = 595.9, y = -3.0, z = -309.3 },
+        { name = "5th Cohort Hoplomachus", zoneId = 156, aetheryiteId = 24, x = -460.0, y = -7.8, z = -467.1 },
+        { name = "Sylph Bonnet", zoneId = 152, aetheryiteId = 4, x = 210.8, y = -20.7, z = -406.0 },
+        { name = "Shelfeye Reaver", zoneId = 138, aetheryiteId = 14, x = -399.1, y = -41.0, z = -216.9 },
+        { name = "Sapsa Shelfscale", zoneId = 138, aetheryiteId = 14, x = -350.9, y = -39.5, z = -359.9 },
+        { name = "Natalan Watchwolf", zoneId = 155, aetheryiteId = 23, x = 649.3, y = 288.4, z = 20.7 }
     },
 
     -- BOOK: Fallgourd I
