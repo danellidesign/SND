@@ -95,6 +95,20 @@ local zodiacBooks = {
         { name = "2nd Cohort Eques", zoneId = 137, aetheryiteId = 12, x = 306.4, y = 76.5, z = -15.0 }
     },
 
+    -- BOOK: Skyfall II
+    SkyfallII = {
+        { name = "Iron Tortoise", zoneId = 146, aetheryiteId = 19, x = -80.7, y = -28.7, z = -132.1 },
+        { name = "Ked", zoneId = 153, aetheryiteId = 5, x = -352.1, y = -39.0, z = -222.3 },
+        { name = "U'Ghamaro Bedesman", zoneId = 180, aetheryiteId = 16, x = 87.0, y = 24.8, z = -701.5 },
+        { name = "4th Cohort Laquearius", zoneId = 140, aetheryiteId = 17, x = -124.9, y = 12.2, z = 78.8 },
+        { name = "Gigas Bikkhus", zoneId = 156, aetheryiteId = 24, x = -218.7, y = 80.2, z = -229.8 },
+        { name = "5th Cohort Hoplomachus", zoneId = 156, aetheryiteId = 24, x = -364.5, y = -5.6, z = -533.9 },
+        { name = "Sylph Bonnet", zoneId = 152, aetheryiteId = 4, x = 157.4, y = -25.5, z = -511.9 },
+        { name = "Shelfeye Reaver", zoneId = 138, aetheryiteId = 14, x = 214.7, y = -23.8, z = -443.4 },
+        { name = "Sapsa Shelfscale", zoneId = 138, aetheryiteId = 14, x = -422.9, y = 240.1, z = 327.9 },
+        { name = "Natalan Watchwolf", zoneId = 155, aetheryiteId = 23, x = 306.4, y = 76.5, z = -15.0 }
+    },
+
     -- BOOK: Fallgourd I
     FallgourdI = {
     },
@@ -116,7 +130,7 @@ local zodiacBooks = {
     }
 }
 
-local currentBook = "SkyfallI"
+local currentBook = "SkyfallII"
 local stopDistance = 3.0    -- How close to get to the flag
 local useFlying = true     -- Set to true if you want to try flying (requires flight unlocked)
 local killsRequired = 3
