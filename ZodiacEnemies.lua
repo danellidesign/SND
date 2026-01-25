@@ -88,11 +88,11 @@ local zodiacBooks = {
         { name = "U'Ghamaro Quarryman", zoneId = 180, aetheryiteId = 16, x = 87.0, y = 24.8, z = -701.5 },
         { name = "Amalj'aa Lancer", zoneId = 146, aetheryiteId = 19, x = -124.9, y = 12.2, z = 78.8 },
         { name = "Magitek Vanguard", zoneId = 147, aetheryiteId = 22, x = -218.7, y = 80.2, z = -229.8 },
-        { name = "Mudpuppy", zoneId = 156, aetheryiteId = 24, x = -221.5, y = 18.4, z = -222.7 },
-        { name = "Lake Cobra", zoneId = 156, aetheryiteId = 24, x = 410.2, y = 12.5, z = -112.6 },
-        { name = "Sylphland Sentinel", zoneId = 152, aetheryiteId = 4, x = -1.0, y = 8.6, z = -92.1 },
-        { name = "Giant Reader", zoneId = 155, aetheryiteId = 23, x = -465.7, y = 271.6, z = 253.6 },
-        { name = "2nd Cohort Equite", zoneId = 137, aetheryiteId = 12, x = 306.4, y = 76.5, z = -15.0 }
+        { name = "Mudpuppy", zoneId = 156, aetheryiteId = 24, x = -364.5, y = -5.6, z = -533.9 },
+        { name = "Lake Cobra", zoneId = 156, aetheryiteId = 24, x = 214.7, y = -23.8, z = -443.4 },
+        { name = "Sylphlands Sentinel", zoneId = 152, aetheryiteId = 4, x = 157.4, y = -25.5, z = -511.9 },
+        { name = "Giant Reader", zoneId = 155, aetheryiteId = 23, x = -422.9, y = 240.1, z = 327.9 },
+        { name = "2nd Cohort Eques", zoneId = 137, aetheryiteId = 12, x = 306.4, y = 76.5, z = -15.0 }
     },
 
     -- BOOK: Fallgourd I
@@ -202,8 +202,8 @@ for i, enemy in ipairs(selectedList) do
 
         if target then
 
-            Dalamud.Log("Targetname: " .. target.Name)
-            Dalamud.Log("Current workenemy: " .. currentEnemy.name)
+            Dalamud.Log(target.Name)
+            Dalamud.Log(enemy.name)
 
             moveAndKill(target)
 
