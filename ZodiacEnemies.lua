@@ -22,7 +22,7 @@ local zodiacBooks = {
     -- North Shroud 154 / 7
     -- Coerthas 155 / 23
 
-    -- BOOK: Skyfire I
+    -- BOOK: Skywind I
     SkywindI = {
         { name = "Sylpheed Snarl", zoneId = 152, aetheryiteId = 4, x = 344.4, y = -27.6, z = -460.9 },
         { name = "5th Cohort Eques", zoneId = 156, aetheryiteId = 24, x = -506.0, y = -4.3, z = -424.7 },
@@ -35,9 +35,18 @@ local zodiacBooks = {
         { name = "Elite Roundsman", zoneId = 180, aetheryiteId = 16, x = 173.5, y = 23.7, z = -677.1 },
         { name = "2nd Cohort Secutor", zoneId = 137, aetheryiteId = 12, x = 402.0, y = 76.4, z = -32.5 }
     },
-    -- BOOK: Skyfire I
+    -- BOOK: Skywind II
     SkywindII = {
         { name = "Sapsa Shelftooth", zoneId = 138, aetheryiteId = 14, x = -291.4, y = -41.6, z = -359.9 },
+        { name = "Gigas Shramana", zoneId = 156, aetheryiteId = 24, x = 426.3, y = -16.0, z = -362.0 },
+        { name = "5th Cohort Signifer", zoneId = 156, aetheryiteId = 24, x = -555.0, y = -3.2, z = -346.3 },
+        { name = "Dreamtoad", zoneId = 152, aetheryiteId = 4, x = 299.5, y = -15.1, z = -154.6 },
+        { name = "4th Cohort Signifer", zoneId = 140, aetheryiteId = 17, x = -559.6, y = 52.8, z = -771.1 },
+        { name = "Natalan Fogcaller", zoneId = 155, aetheryiteId = 23, x = 674.1, y = 286.6, z = 50.6 },
+        { name = "Watchwolf", zoneId = 154, aetheryiteId = 7, x = -103.4, y = -11.4, z = -108.1 },
+        { name = "Zahar'ak Battle Drake", zoneId = 146, aetheryiteId = 19, x = 414.0, y = 12.5, z = -114.5 },
+        { name = "Amalj'aa Archer", zoneId = 146, aetheryiteId = 19, x = -42.8, y = 8.3, z = 51.8 },
+        { name = "Elite Priest", zoneId = 180, aetheryiteId = 16, x = 172.0, y = 23.2, z = -688.8 }
     },
     -- BOOK: Skyearth I
     SkyEarthI = {
@@ -133,22 +142,6 @@ local zodiacBooks = {
         { name = "Lesser Kalong", zoneId = 153, aetheryiteId = 5, x = 570.2, y = 21.7, z = 113.5 },
         { name = "Violet Screech", zoneId = 152, aetheryiteId = 4, x = 162.4, y = -26.3, z = -523.9 },
         { name = "Sapsa Shelfclaw", zoneId = 138, aetheryiteId = 14, x = -275.7, y = -41.9, z = -350.1 }
-    },
-
-    -- BOOK: Fallgourd II
-    FallgourdII = {
-    },
-
-    -- BOOK: Stormzap I
-    StormzapI = {
-    },
-
-    -- BOOK: Stormzap II
-    StormzapII = {
-    },
-
-    -- BOOK: Windshard (The combined one)
-    Windshard = {
     }
 }
 
