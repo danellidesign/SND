@@ -22,7 +22,19 @@ local zodiacBooks = {
     -- North Shroud 154 / 7
     -- Coerthas 155 / 23
 
-
+    -- BOOK: Skyfire I
+    SkywindI = {
+        { name = "Sylpheed Snarl", zoneId = 152, aetheryiteId = 4, x = 344.4, y = -27.6, z = -460.9 },
+        { name = "5th Cohort Eques", zoneId = 156, aetheryiteId = 24, x = -506.0, y = -4.3, z = -424.7 },
+        { name = "Hippogryph", zoneId = 156, aetheryiteId = 24, x = 362.9, y = 20.9, z = -726.9 },
+        { name = "Trenchtooth Sahagin", zoneId = 138, aetheryiteId = 14, x = -47.2, y = -21.9, z = -112.7 },
+        { name = "Sapsa Elbst", zoneId = 138, aetheryiteId = 14, x = -256.9, y = -42.2, z = -329.6 },
+        { name = "Ahriman", zoneId = 147, aetheryiteId = 22, x = 175.5, y = 38.5, z = -28.0 },
+        { name = "Natalan Windtalon", zoneId = 155, aetheryiteId = 23, x = 658.0, y = 286.1, z = 55.1 },
+        { name = "Amalj'aa Thaumaturge", zoneId = 146, aetheryiteId = 19, x = -113.8, y = 12.5, z = 78.4 },
+        { name = "Elite Roundsman", zoneId = 180, aetheryiteId = 16, x = 173.5, y = 23.7, z = -677.1 },
+        { name = "2nd Cohort Secutor", zoneId = 137, aetheryiteId = 12, x = 402.0, y = 76.4, z = -32.5 }
+    },
     -- BOOK: Skyfire I
     SkywindII = {
         { name = "Sapsa Shelftooth", zoneId = 138, aetheryiteId = 14, x = -291.4, y = -41.6, z = -359.9 },
